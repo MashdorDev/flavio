@@ -1,0 +1,235 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-1vsfxrb_START --><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #20bfa9;
+  --color-accent-2: #ff794d;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #e1ecf0;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #1d263a;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.subheading {
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 90%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 3rem;
+  padding: 15px 25px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section .content p {
+    padding: 0.25rem 0;
+    line-height: 1.5;
+  }
+.section .content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.section .content a.link {
+  }
+.section .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+.section .content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+.section .content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+.section .content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content blockquote {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+</style><!-- HEAD_svelte-1vsfxrb_END -->
+      <style>.section-container.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{font-size:1.5rem;font-weight:600;line-height:1.2;width:10%
+}.desktop-nav.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1pax8i0 nav.svelte-1pax8i0.svelte-1pax8i0{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1pax8i0 nav a.link.svelte-1pax8i0.svelte-1pax8i0{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1pax8i0 nav a.link.svelte-1pax8i0.svelte-1pax8i0:hover{border-color:initial}.desktop-nav.svelte-1pax8i0 nav.svelte-1pax8i0 .button.svelte-1pax8i0{font-size:1rem;background-color:#bf9745}@media(min-width: 800px){.desktop-nav.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{display:flex
+}}.mobile-nav.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{display:none
+}}#popup.svelte-1pax8i0.svelte-1pax8i0.svelte-1pax8i0{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1pax8i0 button#close.svelte-1pax8i0.svelte-1pax8i0{position:absolute;right:1rem;top:1rem}
+section.svelte-8iv50y.svelte-8iv50y{color:white;background:#1d263a}.section-container.svelte-8iv50y.svelte-8iv50y{width:100%;display:grid;gap:3rem}@media(min-width: 700px){.section-container.svelte-8iv50y.svelte-8iv50y{grid-template-columns:3fr 2fr
+}}.main.svelte-8iv50y.svelte-8iv50y{display:grid;gap:2rem;place-content:start;max-width:550px}.main.svelte-8iv50y .subheading.svelte-8iv50y{opacity:0.75;font-weight:400;line-height:1.875rem}.main.svelte-8iv50y ul.svelte-8iv50y{display:grid;gap:1.25rem}.main.svelte-8iv50y li.svelte-8iv50y{display:flex;align-items:center;gap:0.75rem}.card.svelte-8iv50y.svelte-8iv50y{color:#1d263a;background:white;border-radius:var(--border-radius);padding:2rem}.card.svelte-8iv50y .button.svelte-8iv50y{background-color:#bf9745}.card.svelte-8iv50y form.svelte-8iv50y{display:grid;gap:1rem}.card.svelte-8iv50y label.svelte-8iv50y{display:grid;gap:4px;font-size:0.875rem;font-weight:500}.card.svelte-8iv50y label span.svelte-8iv50y{margin-bottom:0.25rem}.card.svelte-8iv50y label.has-textarea.svelte-8iv50y{grid-column:var(--wide)}.card.svelte-8iv50y input.svelte-8iv50y,.card.svelte-8iv50y textarea.svelte-8iv50y{-webkit-appearance:none;box-shadow:0 0 0 1px #eee;border-radius:4px;padding:1rem;transition:0.1s box-shadow}.card.svelte-8iv50y input.svelte-8iv50y:focus-visible,.card.svelte-8iv50y textarea.svelte-8iv50y:focus-visible{outline:none;box-shadow:0 0 0 1px var(--color-accent)}.card.svelte-8iv50y .file.svelte-8iv50y{cursor:pointer}.card.svelte-8iv50y .file .field-item.svelte-8iv50y{display:flex;justify-content:space-between;padding:0}.card.svelte-8iv50y .file .field-item span.button-left.svelte-8iv50y{padding:1rem;flex:1;border-radius:8px 0 0 8px;border-right:none}.card.svelte-8iv50y .file .field-item span.button-right.svelte-8iv50y{display:flex;gap:1rem;padding:1rem;padding-left:2rem;border-radius:0 8px 8px 0}.card.svelte-8iv50y .file input.svelte-8iv50y{display:none}
+.section-container.svelte-19wx290.svelte-19wx290{display:grid;gap:3rem}@media(min-width: 600px){.section-container.svelte-19wx290.svelte-19wx290{grid-template-columns:1fr 2fr;gap:300px
+}}.logo.svelte-19wx290.svelte-19wx290{width:150px}.main.svelte-19wx290.svelte-19wx290{display:grid;place-content:start;gap:2rem}.main.svelte-19wx290 .company-description.svelte-19wx290{font-weight:400;font-size:1rem;line-height:1.4rem;opacity:0.8}.links.svelte-19wx290.svelte-19wx290{display:flex;flex-wrap:wrap;gap:5rem;justify-content:flex-end}.links.svelte-19wx290 .item.svelte-19wx290{display:grid;place-content:start}.links.svelte-19wx290 .item .label.svelte-19wx290{font-weight:600;font-size:1.125rem;line-height:1.6rem;opacity:0.6;margin-bottom:1rem}.links.svelte-19wx290 .item nav.svelte-19wx290{display:grid;place-items:start;gap:0.75rem}nav.svelte-19wx290 .link.svelte-19wx290{border-color:transparent;font-size:1rem}nav.svelte-19wx290 .link.svelte-19wx290:hover{border-color:initial}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-1854b2ea"><header class="section-container svelte-1pax8i0"><div class="desktop-nav svelte-1pax8i0"><a href="/" class="logo svelte-1pax8i0"><img src="https://ipsaclmqpmiprnjfhuxk.supabase.co/storage/v1/object/public/images/5cdc6ae0-ff26-4d5c-8583-8d52f65cde09/1729454436075Flavio%20Website%20-%20Logo.png" alt=""></a>
+    <nav class="svelte-1pax8i0"><a class="link svelte-1pax8i0" href="/about">Sobre Nosotros</a><a class="link svelte-1pax8i0" href="/services">Nuestros Servicios</a>
+      <a href="/consultation" class="button svelte-1pax8i0">Contacto</a></nav></div>
+  <div class="mobile-nav svelte-1pax8i0"><a href="/" class="logo svelte-1pax8i0"><img src="https://ipsaclmqpmiprnjfhuxk.supabase.co/storage/v1/object/public/images/5cdc6ae0-ff26-4d5c-8583-8d52f65cde09/1729454436075Flavio%20Website%20-%20Logo.png" alt=""></a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95"/><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-5ee0f7da"><section class="svelte-8iv50y"><div class="section-container svelte-8iv50y"><div class="main svelte-8iv50y"><h2 class="heading"></h2>
+      <h3 class="subheading svelte-8iv50y">¿Tienes preguntas o estás listo para solicitar un servicio? Completa nuestro formulario de contacto y nos pondremos en contacto contigo lo antes posible.</h3>
+      
+      <h4>Asistencia Inmediata
+      </h4>
+      <p class="subheading svelte-8iv50y">Para asistencia rápida, puedes llamarnos o enviarnos un correo electrónico:
+      </p>
+<ul class="subheading svelte-8iv50y"><li class="svelte-8iv50y">Teléfono: 55.43.56.9678 / 55.62.56.1883
+</li>
+  <li class="svelte-8iv50y">Email: serviciosadmv@gmail.com
+  </li></ul>
+
+      <h4>Nuestras Oficinas
+      </h4>
+
+  <p class="subheading svelte-8iv50y">MONTECITO #38 PISO  39 OFICINA 34 COLONIA NAPOLES WTC
+  </p></div>
+    <div class="card svelte-8iv50y"><form class="svelte-8iv50y">
+            <label class="svelte-8iv50y"><span class="svelte-8iv50y">Nombre
+                  <span class="required svelte-8iv50y">*</span></span>
+                <input type="text" name="Nombre" placeholder="Esse exercitation in" class="svelte-8iv50y">
+              </label>
+            <label class="svelte-8iv50y"><span class="svelte-8iv50y">Correo Electrónico
+                  <span class="required svelte-8iv50y">*</span></span>
+                <input type="text" name="Correo Electrónico" placeholder="johndoe@email.com" class="svelte-8iv50y">
+              </label>
+            <label class="svelte-8iv50y"><span class="svelte-8iv50y">Sujeto
+                  </span>
+                <input type="text" name="Sujeto" placeholder="Financial and report" class="svelte-8iv50y">
+              </label>
+            <label class="has-textarea svelte-8iv50y"><span class="svelte-8iv50y">Detalles
+                  <span class="required svelte-8iv50y">*</span>
+                  </span>
+                <textarea name="Detalles" placeholder="" class="svelte-8iv50y"></textarea>
+              </label>
+          <button type="submit" class="button svelte-8iv50y">
+            <span class="svelte-8iv50y">Enviar</span></button></form></div></div></section></div> 
+<div class="section" id="section-afe6da5f"><footer class="section-container svelte-19wx290"><div class="main svelte-19wx290"><a href="/" class="logo svelte-19wx290"><img src="https://ipsaclmqpmiprnjfhuxk.supabase.co/storage/v1/object/public/images/5cdc6ae0-ff26-4d5c-8583-8d52f65cde09/1729454436075Flavio%20Website%20-%20Logo.png" alt=""></a>
+    <div class="company-description svelte-19wx290"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div></div>
+  <div class="links svelte-19wx290"><div class="item svelte-19wx290"><h4 class="label svelte-19wx290"></h4>
+        <nav class="svelte-19wx290"><a class="link svelte-19wx290" href="/about">Sobre Nosotros</a><a class="link svelte-19wx290" href="/consultation">Contacto</a><a class="link svelte-19wx290" href="/services">Nuestro Servicios</a></nav>
+      </div></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/ac54b3af-077e-4d35-9a92-1ca4008e60d2.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-1854b2ea'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://ipsaclmqpmiprnjfhuxk.supabase.co/storage/v1/object/public/images/5cdc6ae0-ff26-4d5c-8583-8d52f65cde09/1729454436075Flavio%20Website%20-%20Logo.png"}},"site_nav":[{"link":{"url":"/about","label":"Sobre Nosotros"}},{"link":{"url":"/services","label":"Nuestros Servicios"}}],"primary_cta":{"url":"/consultation","label":"Contacto"}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/13d59496-23a8-4ef0-852f-3b797bc60f1a.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-afe6da5f'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://ipsaclmqpmiprnjfhuxk.supabase.co/storage/v1/object/public/images/5cdc6ae0-ff26-4d5c-8583-8d52f65cde09/1729454436075Flavio%20Website%20-%20Logo.png"},"title":""},"footer_links":[{"label":"","link_list":[{"link":{"url":"/about","label":"Sobre Nosotros"}},{"link":{"url":"/consultation","label":"Contacto"}},{"link":{"url":"/services","label":"Nuestro Servicios","active":false}}]}],"company_description":{"html":"","markdown":"\n"}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/8ff6c5d4-336a-4866-94ed-04a86a293671.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-5ee0f7da'),
+              hydrate: true,
+              props: {"heading":"","subheading":"¿Tienes preguntas o estás listo para solicitar un servicio? Completa nuestro formulario de contacto y nos pondremos en contacto contigo lo antes posible.","list_items":[{"icon":"","label":"Asistencia Inmediata"}],"form":{"fields":[{"type":"text","label":"Nombre","required":"Ipsum magna occaecat","placeholder":"Esse exercitation in"},{"type":"email","label":"Correo Electrónico","required":true,"placeholder":"johndoe@email.com"},{"type":"text","label":"Sujeto","required":"","placeholder":"Financial and report"},{"type":"textarea","label":"Detalles","required":true,"placeholder":""}],"submission_error":{"html":"<p>Algo pasó, tu mensaje no fue enviado.</p>","markdown":"<p>Algo pasó, tu mensaje no fue enviado.</p>"},"submission_confirmation":{"html":"<p>¡Gracias por enviarlo!</p>","markdown":"<p>¡Gracias por enviarlo!</p>"}}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
