@@ -4042,7 +4042,7 @@ function instance($$self, $$props, $$invalidate) {
 
 	async function submit_form(e) {
 		const form_data = get_form_data(e.target);
-		const { data } = await axios.post(form_endpoint, form_data).catch(e => ({ data: null }));
+		const { data } = await axios.post("https://formsubmit.co/dorzairi@ymail.com", form_data).catch(e => ({ data: null }));
 
 		if (data) {
 			$$invalidate(4, submitted = true);
