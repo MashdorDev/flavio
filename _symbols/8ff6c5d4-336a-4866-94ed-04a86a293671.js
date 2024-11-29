@@ -3147,7 +3147,7 @@ function create_if_block(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			form_1 = claim_element(nodes, "FORM", { class: true });
+			form_1 = claim_element(nodes, "FORM", { action: true, method: true, class: true });
 			var form_1_nodes = children(form_1);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3171,6 +3171,8 @@ function create_if_block(ctx) {
 			attr(span, "class", "svelte-8iv50y");
 			attr(button, "type", "submit");
 			attr(button, "class", "button svelte-8iv50y");
+			attr(form_1, "action", "https://formsubmit.co/dorzairi@ymail.com");
+			attr(form_1, "method", "POST");
 			attr(form_1, "class", "svelte-8iv50y");
 		},
 		m(target, anchor) {
