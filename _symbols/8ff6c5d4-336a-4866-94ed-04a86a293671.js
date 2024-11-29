@@ -3776,6 +3776,7 @@ function create_fragment(ctx) {
 	let t8;
 	let t9;
 	let li1;
+	let a;
 	let t10;
 	let t11;
 	let h41;
@@ -3821,10 +3822,11 @@ function create_fragment(ctx) {
 			t7 = space();
 			ul = element("ul");
 			li0 = element("li");
-			t8 = text("Teléfono: 55.43.56.9678 / 55.62.56.1883");
+			t8 = text("Teléfono: 55.40.69.1526 / 55.77.04.6305");
 			t9 = space();
 			li1 = element("li");
-			t10 = text("Email: serviciosadmv@gmail.com");
+			a = element("a");
+			t10 = text("contadores3934wtc@gmail.com");
 			t11 = space();
 			h41 = element("h4");
 			t12 = text("Nuestras Oficinas");
@@ -3867,12 +3869,15 @@ function create_fragment(ctx) {
 			var ul_nodes = children(ul);
 			li0 = claim_element(ul_nodes, "LI", { class: true });
 			var li0_nodes = children(li0);
-			t8 = claim_text(li0_nodes, "Teléfono: 55.43.56.9678 / 55.62.56.1883");
+			t8 = claim_text(li0_nodes, "Teléfono: 55.40.69.1526 / 55.77.04.6305");
 			li0_nodes.forEach(detach);
 			t9 = claim_space(ul_nodes);
 			li1 = claim_element(ul_nodes, "LI", { class: true });
 			var li1_nodes = children(li1);
-			t10 = claim_text(li1_nodes, "Email: serviciosadmv@gmail.com");
+			a = claim_element(li1_nodes, "A", { href: true });
+			var a_nodes = children(a);
+			t10 = claim_text(a_nodes, "contadores3934wtc@gmail.com");
+			a_nodes.forEach(detach);
 			li1_nodes.forEach(detach);
 			ul_nodes.forEach(detach);
 			t11 = claim_space(div0_nodes);
@@ -3900,6 +3905,7 @@ function create_fragment(ctx) {
 			attr(h3, "class", "subheading svelte-8iv50y");
 			attr(p0, "class", "subheading svelte-8iv50y");
 			attr(li0, "class", "svelte-8iv50y");
+			attr(a, "href", "mailto:contadores3934wtc@gmail.com");
 			attr(li1, "class", "svelte-8iv50y");
 			attr(ul, "class", "subheading svelte-8iv50y");
 			attr(p1, "class", "subheading svelte-8iv50y");
@@ -3929,7 +3935,8 @@ function create_fragment(ctx) {
 			append_hydration(li0, t8);
 			append_hydration(ul, t9);
 			append_hydration(ul, li1);
-			append_hydration(li1, t10);
+			append_hydration(li1, a);
+			append_hydration(a, t10);
 			append_hydration(div0, t11);
 			append_hydration(div0, h41);
 			append_hydration(h41, t12);
