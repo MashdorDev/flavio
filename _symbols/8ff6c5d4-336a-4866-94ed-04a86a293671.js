@@ -2929,7 +2929,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (256:22) 
+// (257:22) 
 function create_if_block_7(ctx) {
 	let div;
 	let html_tag;
@@ -3016,7 +3016,7 @@ function create_if_block_7(ctx) {
 	};
 }
 
-// (248:26) 
+// (249:26) 
 function create_if_block_6(ctx) {
 	let div;
 	let html_tag;
@@ -3106,12 +3106,14 @@ function create_if_block_6(ctx) {
 // (196:6) {#if !submitted && !error}
 function create_if_block(ctx) {
 	let form_1;
+	let input;
 	let t0;
+	let t1;
 	let button;
 	let icon;
-	let t1;
-	let span;
 	let t2;
+	let span;
+	let t3;
 	let current;
 	let mounted;
 	let dispose;
@@ -3133,50 +3135,58 @@ function create_if_block(ctx) {
 	return {
 		c() {
 			form_1 = element("form");
+			input = element("input");
+			t0 = space();
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
-			t0 = space();
+			t1 = space();
 			button = element("button");
 			create_component(icon.$$.fragment);
-			t1 = space();
+			t2 = space();
 			span = element("span");
-			t2 = text("Enviar");
+			t3 = text("Enviar");
 			this.h();
 		},
 		l(nodes) {
-			form_1 = claim_element(nodes, "FORM", { action: true, method: true, class: true });
+			form_1 = claim_element(nodes, "FORM", { class: true });
 			var form_1_nodes = children(form_1);
+			input = claim_element(form_1_nodes, "INPUT", { type: true, name: true, class: true });
+			t0 = claim_space(form_1_nodes);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].l(form_1_nodes);
 			}
 
-			t0 = claim_space(form_1_nodes);
+			t1 = claim_space(form_1_nodes);
 			button = claim_element(form_1_nodes, "BUTTON", { type: true, class: true });
 			var button_nodes = children(button);
 			claim_component(icon.$$.fragment, button_nodes);
-			t1 = claim_space(button_nodes);
+			t2 = claim_space(button_nodes);
 			span = claim_element(button_nodes, "SPAN", { class: true });
 			var span_nodes = children(span);
-			t2 = claim_text(span_nodes, "Enviar");
+			t3 = claim_text(span_nodes, "Enviar");
 			span_nodes.forEach(detach);
 			button_nodes.forEach(detach);
 			form_1_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
+			attr(input, "type", "hidden");
+			attr(input, "name", "access_key");
+			input.value = "0e52e7f2-b594-453f-813c-093589f01254";
+			attr(input, "class", "svelte-8iv50y");
 			attr(span, "class", "svelte-8iv50y");
 			attr(button, "type", "submit");
 			attr(button, "class", "button svelte-8iv50y");
-			attr(form_1, "action", "https://formsubmit.co/dorzairi@ymail.com");
-			attr(form_1, "method", "POST");
 			attr(form_1, "class", "svelte-8iv50y");
 		},
 		m(target, anchor) {
 			insert_hydration(target, form_1, anchor);
+			append_hydration(form_1, input);
+			append_hydration(form_1, t0);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
@@ -3184,12 +3194,12 @@ function create_if_block(ctx) {
 				}
 			}
 
-			append_hydration(form_1, t0);
+			append_hydration(form_1, t1);
 			append_hydration(form_1, button);
 			mount_component(icon, button, null);
-			append_hydration(button, t1);
+			append_hydration(button, t2);
 			append_hydration(button, span);
-			append_hydration(span, t2);
+			append_hydration(span, t3);
 			current = true;
 
 			if (!mounted) {
@@ -3212,7 +3222,7 @@ function create_if_block(ctx) {
 						each_blocks[i] = create_each_block(child_ctx);
 						each_blocks[i].c();
 						transition_in(each_blocks[i], 1);
-						each_blocks[i].m(form_1, t0);
+						each_blocks[i].m(form_1, t1);
 					}
 				}
 
@@ -3255,7 +3265,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (231:12) {:else}
+// (232:12) {:else}
 function create_else_block(ctx) {
 	let label;
 	let span;
@@ -3348,7 +3358,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (222:42) 
+// (223:42) 
 function create_if_block_3(ctx) {
 	let label;
 	let span;
@@ -3440,7 +3450,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (200:12) {#if type === "file"}
+// (201:12) {#if type === "file"}
 function create_if_block_1(ctx) {
 	let label;
 	let span0;
@@ -3589,7 +3599,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (235:18) {#if required}
+// (236:18) {#if required}
 function create_if_block_5(ctx) {
 	let span;
 	let t;
@@ -3620,7 +3630,7 @@ function create_if_block_5(ctx) {
 	};
 }
 
-// (226:18) {#if required}
+// (227:18) {#if required}
 function create_if_block_4(ctx) {
 	let span;
 	let t;
@@ -3651,7 +3661,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (204:18) {#if required}
+// (205:18) {#if required}
 function create_if_block_2(ctx) {
 	let span;
 	let t;
@@ -3682,7 +3692,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (198:10) {#each form.fields as { label, type, placeholder, required }
+// (199:10) {#each form.fields as { label, type, placeholder, required }
 function create_each_block(ctx) {
 	let current_block_type_index;
 	let if_block;
@@ -4042,7 +4052,7 @@ function instance($$self, $$props, $$invalidate) {
 
 	async function submit_form(e) {
 		const form_data = get_form_data(e.target);
-		const { data } = await axios.post("https://formsubmit.co/contadores3934wtc@gmail.com", form_data).catch(e => ({ data: null }));
+		const { data } = await axios.post("https://api.web3forms.com/submit", form_data).catch(e => ({ data: null }));
 
 		if (data) {
 			$$invalidate(4, submitted = true);
